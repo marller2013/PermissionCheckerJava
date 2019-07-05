@@ -8,5 +8,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.METHOD)
 public @interface OnNeverAsk {
-    String[] value() default "";
+    String[] values() default "";
 }

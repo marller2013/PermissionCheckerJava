@@ -2,8 +2,6 @@ package com.marller.compiler;
 
 import com.marller.api.OnNeed;
 
-import java.util.Arrays;
-import java.util.List;
 
 import javax.lang.model.element.ExecutableElement;
 
@@ -15,8 +13,8 @@ public class NeedMethod {
         this.mExecutableElement=methodElement;
     }
 
-    public List<String> getPermissionMethodNames(){
-        return Arrays.asList(mExecutableElement.getAnnotation(OnNeed.class).value());
+    public String[] getPermissionMethodNames(){
+        return mExecutableElement.getAnnotation(OnNeed.class).values();
     }
 
     public String getMethodName(){
