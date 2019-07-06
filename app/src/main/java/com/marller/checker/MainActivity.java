@@ -1,10 +1,12 @@
 package com.marller.checker;
 
+import android.Manifest;
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.pm.PackageManager;
-import android.os.Bundle;
+import com.marller.api.OnNeed;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +19,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        int[] a=new int[5];
     }
 
+    @OnNeed(values = {Manifest.permission.CAMERA})
+    public void showCamera() {
+
+    }
 }
