@@ -224,13 +224,13 @@ public class ClassBuilder {
         resultBlock.beginControlFlow("for (int i = $L; i < " + propertyPermission + ".length; i++ )", 0);
         resultBlock.beginControlFlow("if (!" + CALLER + ".shouldShowRequestPermissionRationale(" + propertyPermission + "[i]))");
         if (null != onNeverAsk) {
-            resultBlock.addStatement(CALLER + "." + onNeverAsk.getSimpleName().toString());
+            resultBlock.addStatement(CALLER + "." + onNeverAsk.getSimpleName().toString() + "()");
         }
         resultBlock.addStatement("return");
         resultBlock.endControlFlow();
         resultBlock.endControlFlow();
         if (null != onDenied) {
-            resultBlock.addStatement(CALLER + "." + onNeverAsk.getSimpleName().toString());
+            resultBlock.addStatement(CALLER + "." + onDenied.getSimpleName().toString() + "()");
         }
         resultBlock.endControlFlow();
         resultBlock.endControlFlow();
