@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:id="@+id/showCamera"
+        android:id="@+id/fragShowCamera"
         android:text="申请相机权限" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/showLocation"
+        android:id="@+id/fragShowLocation"
         android:text="申请定位权限" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/showFragment"
-        android:text="跳转Fragment" />
-
 </LinearLayout>
